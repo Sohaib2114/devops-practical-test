@@ -26,5 +26,5 @@ jobs:
     - name: Run tests
       run:  npm test
     - name: Simulate tests
-      if: success
+      if: success()
       run: echo "Ready for Deployment"
