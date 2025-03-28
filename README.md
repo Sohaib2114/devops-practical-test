@@ -78,7 +78,7 @@ Solutions to the practical test for devops job evaluation
    - Wrote a `service.yaml` file manually to expose the deployment using ClusterIP.
 
 
-## Task 3: Docker and Kubernetes Files fixes
+## Task 4: Docker and Kubernetes Files fixes
 Steps to Complete
 
 Identified and Fixed Errors in Dockerfile & Kubernetes YAML
