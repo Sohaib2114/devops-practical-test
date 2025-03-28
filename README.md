@@ -53,3 +53,26 @@ Solutions to the practical test for devops job evaluation
 
 6. **Could Not Fully Test Deployment**  
    - Since I don't have an AWS account yet, I wasn't able to apply the Terraform configuration.
+
+
+### Challenges Faced
+
+- **Large File Size Issue**: Encountered a problem when pushing the repo because Terraform downloaded provider binaries inside `.terraform/`, which contained files larger than 100MB.
+- **GitHub Rejecting the Push**: GitHub blocks files exceeding 100MB, causing push failures.
+- **Solution Implemented**: Removed `.terraform/` from tracking using `.gitignore` and cleared it from the Git history using `git filter-repo`.
+- **Time Consumption**: Debugging and fixing this issue took significant time.
+
+## Task 3: Kubernetes Deployment
+
+### Objective:
+- Write a Kubernetes manifest file to deploy a simple app.
+
+### Instructions:
+1. **Generated Deployment YAML using Command**  
+   ```sh
+   kubectl create deployment nginx-deployment --image=nginx:latest --replicas=2 --dry-run=client -o yaml > deployment.yaml
+   ```
+   - This created a `deployment.yaml` file with an `nginx` deployment having 2 replicas.
+
+2. **Created Service YAML Manually**  
+   - Wrote a `service.yaml` file manually to expose the deployment using ClusterIP.
