@@ -1,0 +1,27 @@
+**Explanation of Fixes in Dockerfile and Kubernetes Deployment YAML**
+
+### **Dockerfile Fixes:**
+1. **Fixed Base Image Typo:**
+   - Original: `FROM python:3.9-silm`
+   - Fixed: `FROM python:3.9-slim`
+
+
+### **Kubernetes Deployment YAML Fixes:**
+1. **Fixed API Version for Deployment:**
+   - Original: `apiVersion: v1`
+   - Fixed: `apiVersion: apps/v1`
+
+2. **Fixed Indentation and Formatting Issues:**
+   - `name: my-app` was not properly indented under `metadata`.
+
+3. **Fixed Replicas Definition:**
+   - Original: `replicas: two`
+   - Fixed: `replicas: 2`
+
+4. **Fixed containerPort Data Type:**
+   - Original: `containerPort: "80"`
+   - Fixed: `containerPort: 80`
+
+
+
+
