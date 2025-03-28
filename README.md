@@ -32,4 +32,24 @@ Solutions to the practical test for devops job evaluation
    - Verified in GitHub Actions that everything ran successfully.
    - Saw the message **"Ready for Deployment"** confirming success.
 
+## Task 2: Terraform Basics
 
+### Steps to Complete
+
+1. **Started with an Example `main.tf`**  
+   - Followed the Terraform guide from [HashiCorp's tutorial](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build).
+
+2. **Modified `main.tf` to Use Variables**  
+   - Replaced hardcoded values with variables for `region` and `AMI ID`.
+
+3. **Added a `variables.tf` File**  
+   - Defined `aws_region` and `ami_id` as Terraform variables.
+
+4. **Created `terraform.tfvars`**  
+   - Added default values to configure the AWS region and AMI ID.
+
+5. **Initialized Terraform**  
+   - Ran `terraform init` to set up the working directory.
+
+6. **Could Not Fully Test Deployment**  
+   - Since I don't have an AWS account yet, I wasn't able to apply the Terraform configuration.
