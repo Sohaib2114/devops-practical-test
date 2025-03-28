@@ -1,0 +1,41 @@
+How I’d Approach Task 5
+For this task, I’d start by looking at the logs to understand what’s happening. 
+Web server logs (like Apache or Nginx) track every request, including details like:
+
+IP Address (who made the request)
+
+Timestamp (when it happened)
+
+Requested URL (what they were trying to access)
+
+Response Code (whether the request was successful or not)
+
+Step 1: Analyzing the Logs
+Looking at the logs i shared, I see a lot of 404 errors. These usually mean someone (or something, like a bot) is trying to access files that don’t exist.
+If I had 500 errors, that would be a bigger problem because it means the server is failing to handle requests properly.
+
+Step 2: Identifying Issues
+A bunch of 404 errors trying to access .env files and .git/config suggests someone is scanning for sensitive data.
+
+400 errors could be bad requests from bots or attackers looking for weaknesses.
+
+If I saw 500 errors, I’d investigate the backend because something is breaking.
+
+Step 3: Setting Up an Alerting Rule
+Since the goal is to catch 500 errors quickly, I’d set a rule like this:
+
+If an IP causes 5 or more 500 errors in 1 minute, trigger an alert.
+
+If the server logs 20+ 500 errors in 5 minutes, raise a high-priority alert.
+
+
+Step 4: How I’d Implement It 
+If I were actually setting this up, I’d go for a simple Prometheus + Grafana setup:
+
+Use Prometheus to scrape logs and track 500 errors.
+
+Set up Alertmanager to notify me when errors spike.
+
+Use Grafana to visualize trends over time.
+
+

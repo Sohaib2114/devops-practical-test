@@ -85,6 +85,9 @@ Identified and Fixed Errors in Dockerfile & Kubernetes YAML
 
 Corrected the base image name, indentation, and syntax issues.
 
-Explanation for This Task is in the Folder
-
 Detailed explanation of the fixes is available in the respective folder.
+
+## Task 5: Monitoring & Loggingi
+
+Detailed explanation of the task is available in the respective folder.
+
